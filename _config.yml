@@ -64,7 +64,7 @@ content:
   - title: Experience
     layout: list
     content:
-      - layout: right
+      - layout: left
         title: Tymit
         sub_title: Engineering Lead
         caption: March 2021 - Present
@@ -84,7 +84,7 @@ content:
           **Tech stack**: Quarkus, Java 11+, JUnit, Micronaut, Kotlin, Grails, Groovy, Spock, AWS (SQS, SNS, RDS, EC2, SES, CloudWatch, API Gateway), PostgreSQL, MongoDB, Docker, 
           Kibana, Grafana, Prometheus.
 
-      - layout: right
+      - layout: left
         title: Tymit
         sub_title: Principal Software Engineer
         caption: February 2018 - March 2021
@@ -107,7 +107,7 @@ content:
           **Tech stack**: Quarkus, Java 11+, JUnit, Micronaut, Kotlin, Grails, Groovy, Spock, AWS (SQS, SNS, RDS, EC2, SES, CloudWatch, API Gateway), PostgreSQL, MongoDB, Docker, 
           Kibana, Grafana, Prometheus.
 
-      - layout: right
+      - layout: left
         title: Universidad Rey Juan Carlos
         sub_title: Associate Lecturer
         caption: January 2019 - August 2021
@@ -120,7 +120,7 @@ content:
           Associate Lecturer in the [Department of Computing Science, Computer Architecture, Programming Languages and Systems and Statistics and Operative 
           Investigation](https://gestion2.urjc.es/pdi/departamento/Y157).
       
-      - layout: right
+      - layout: left
         title: Santander UK
         sub_title: Senior Software Engineer
         caption: September 2017 - February 2018
@@ -137,7 +137,7 @@ content:
 
           **Tech stack**: Java 11, Kotlin, Apache Kafka, Corda, Tesseract, Spring Boot, JUnit, PostgreSQL, MongoDB, Docker.
 
-      - layout: right
+      - layout: left
         title: Babel 
         sub_title: Senior Software Engineer
         caption: October 2015 - September 2017
@@ -155,7 +155,7 @@ content:
 
           **Tech stack**: Java 11, Java 8, PHP, Python, Spring Boot, JUnit, Django, Liferay, PostgreSQL, MySQL, MongoDB.
 
-      - layout: right
+      - layout: left
         title: Grupo Comunica 
         sub_title: Junior Software Engineer
         caption: May 2013 - September 2014
@@ -174,7 +174,7 @@ content:
   - title: Education
     layout: list
     content:
-      - layout: right
+      - layout: left
         title: Universidad de Granada
         sub_title: Master's degree, Data Science and Computer Engineering
         grade: A
@@ -183,7 +183,7 @@ content:
         description: | # this will include new lines to allow paragraphs
           **Master's Thesis**: _SmartARGlass - Augmented Reality on smart devices_
       
-      - layout: right
+      - layout: left
         title: Universidad de Córdoba
         sub_title: Degree, Computer Engineering
         grade: B+
