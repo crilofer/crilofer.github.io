@@ -1,0 +1,245 @@
+# Site
+repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
+# favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
+
+# Content configuration version
+version: 2
+
+# Personal info
+name: Cristian López Fernández
+title: Engineering Lead
+email: crilopfer@gmail.com
+# email_title: Email (Email title override)
+phone: +34 667 82 61 26
+# phone_title: Phone (Phone title override)
+# website: Your website (eg. https://google.com)(optional)
+# website_title: Web (Website title override)
+# address: C/ Grañón 10, 4-8. Madrid (Madrid) 28050
+# address_title: Address (Address title override)
+
+# Dark Mode (true/false/never)
+darkmode: false
+
+# Social links
+twitter_username: crilofer
+github_username:  crilofer
+#stackoverflow_username: "00000001"
+#dribbble_username: jekyll
+#facebook_username: jekyll
+#flickr_username: jekyll
+#instagram_username: jekyll
+linkedin_username: crilopfer
+#xing_username: jekyll
+#pinterest_username: jekyll
+#youtube_username: jekyll
+#googleplus_username: +jekyll
+#orcid_username: 0000-0000-0000-0000
+
+# Additional icon links
+#additional_links:
+#- title: Link name
+#  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
+#  url: Link url (eg. https://google.com)
+
+# Google Analytics and Tag Manager
+# Using more than one of these may cause issues with reporting
+# gtm: "GTM-0000000"
+# gtag: "UA-00000000-0"
+# google_analytics: "UA-00000000-0"
+
+# About Section
+# about_title: About Me (Use this to override about section title)
+about_profile_image: images/profile_photo.jpg
+about_content: | # this will include new lines to allow paragraphs
+  I’ve continuously worked in software engineering for my <mark>whole 7+ year career</mark>.
+
+  Over my career I’ve had the chance to participate in several projects and contributed to different types of <mark>system architectures, teams, products and overall tech ecosystems</mark>.
+
+  In my current employment I am responsible for multiple distributed backend teams, alongside coordinating with frontend teams and other stakeholders. 
+  My main work specifically focusses on complex architectural decisions regarding company-wide services scalability, security and reliability.
+
+  I seek to leverage my knowledge and experience to help build <mark>customer-centric</mark> features in the product area, <mark>leading teams</mark> and helping in <mark>technical architectural designs</mark>.
+
+content:
+  - title: Experience
+    layout: list
+    content:
+      - layout: right
+        title: Tymit
+        sub_title: Engineering Lead
+        caption: March 2021 - Present
+        link: https://tymit.com
+        link_text: Tymit
+        location: London (United Kingdom)
+        quote: >
+          The credit card, reinvented. A Fintech bringing financial wellness to customers.
+        description: | # this will include new lines to allow paragraphs
+          I was promoted to Lead position. Key responsabilities about this role are:
+
+          - Managing engineering team.
+          - Design scalable, reliable and secure architecture solutions.
+          - Involve with stakeholders and product in the company roadmap decisioning.
+          - Continue contributing to product with features implementation.
+
+          **Tech stack**: Quarkus, Java 11+, JUnit, Micronaut, Kotlin, Grails, Groovy, Spock, AWS (SQS, SNS, RDS, EC2, SES, CloudWatch, API Gateway), PostgreSQL, MongoDB, Docker, 
+          Kibana, Grafana, Prometheus.
+
+      - layout: right
+        title: Tymit
+        sub_title: Principal Software Engineer
+        caption: February 2018 - March 2021
+        link: https://tymit.com
+        link_text: Tymit
+        location: London (United Kingdom)
+        quote: >
+          
+        description: | # this will include new lines to allow paragraphs
+          **Employee n° 1**
+
+          I started the project from scratch. At the very beginning, in order to get an early MVP, we built a monolith system based on Grails and Groovy. After 1 year 
+          and due to the growth of the company, we started migrating our monolith architecture to microservices architecture using Quarkus and Java. The main reasons were scalability, 
+          continuous integration and understanding the domain model of the business.
+
+          I have been involved in the whole business growth process of the company, taking decisions with stakeholders and contributing with new features for product area.
+
+          As part of the increase of the team, I have been mentoring all of them, giving support and helping in the onboarding task.
+
+          **Tech stack**: Quarkus, Java 11+, JUnit, Micronaut, Kotlin, Grails, Groovy, Spock, AWS (SQS, SNS, RDS, EC2, SES, CloudWatch, API Gateway), PostgreSQL, MongoDB, Docker, 
+          Kibana, Grafana, Prometheus.
+
+      - layout: right
+        title: Universidad Rey Juan Carlos
+        sub_title: Associate Lecturer
+        caption: January 2019 - August 2021
+        link: https://www.urjc.es
+        link_text: URJC
+        location: Madrid (Spain)
+        quote: >
+          “A man's college and university degrees mean nothing to me until I see what he is able to do with them.” - Henry Ford
+        description: | # this will include new lines to allow paragraphs
+          Associate Lecturer in the [Department of Computing Science, Computer Architecture, Programming Languages and Systems and Statistics and Operative 
+          Investigation](https://gestion2.urjc.es/pdi/departamento/Y157).
+      
+      - layout: right
+        title: Santander UK
+        sub_title: Senior Software Engineer
+        caption: September 2017 - February 2018
+        link: https://www.santander.co.uk
+        link_text: Santander UK
+        location: London (United Kingdom)
+        quote: >
+          A wholly owned subsidiary of the Spanish Santander Group
+        description: | # this will include new lines to allow paragraphs
+          Participating in several projects from a R&D department. 
+
+          - Implementing Blockchain solution for internal project.
+          - Leading OCR project for Identity document verification.
+
+          **Tech stack**: Java 11, Kotlin, Apache Kafka, Corda, Tesseract, Spring Boot, JUnit, PostgreSQL, MongoDB, Docker.
+
+      - layout: right
+        title: Babel 
+        sub_title: Senior Software Engineer
+        caption: October 2015 - September 2017
+        link: https://babel.es/en
+        link_text: BABEL
+        location: Madrid (Spain)
+        quote: >
+          Information Technology & Services
+        description: | # this will include new lines to allow paragraphs
+          As it is a consulting company, I was participating in several projects from different companies like **BBVA**, **Orange**, 
+          **Telefónica**, **Sanitas**, **HM Hospitales**, among others.
+
+          Although I participated as individual contributor most of the time, I had the opportunity of leading some teams (5-6 people) as Team lead using agile methodologies, supporting them on the technical area, contributing on 
+          technical design sessions, etc.
+
+          **Tech stack**: Java 11, Java 8, PHP, Python, Spring Boot, JUnit, Django, Liferay, PostgreSQL, MySQL, MongoDB.
+
+      - layout: right
+        title: Grupo Comunica 
+        sub_title: Junior Software Engineer
+        caption: May 2013 - September 2014
+        link: http://www.grupocomunica.com/
+        link_text: Grupo Comunica
+        location: Córdoba (Spain)
+        quote: >
+          Global Telecommunications Operator
+        description: | # this will include new lines to allow paragraphs
+          - Participating in the development of Android & iOS applications.
+          - Implementing Audio-Visual streaming project.
+
+          **Tech stack**: Java, Android SDK, Objective-C, PHP, MySQL.
+
+  
+  - title: Education
+    layout: list
+    content:
+      - layout: right
+        title: Universidad de Granada
+        sub_title: Master's degree, Data Science and Computer Engineering
+        grade: A
+        grade_title: Grade
+        caption: 2014 - 2015
+        description: | # this will include new lines to allow paragraphs
+          **Master's Thesis**: _SmartARGlass - Augmented Reality on smart devices_
+      
+      - layout: right
+        title: Universidad de Córdoba
+        sub_title: Degree, Computer Engineering
+        grade: B+
+        grade_title: Grade
+        caption: 2010 - 2014
+        description: | # this will include new lines to allow paragraphs
+          **End-of-Degree project**: _RPiDomotic - Domotic system using Raspberry Pi_
+        
+  - title: A Little More About Me
+    layout: text
+    content: | # this will include new lines to allow paragraphs
+
+      I love Amazon Alexa and I am contributing with skills implementations about education, mental health and leisure.
+
+      Also, I am Open Water Diver by SSI International.
+  
+#  - title: Projects # Title for the section
+#    layout: list # Type of content section (list/text)
+#    content:
+#      - layout: left
+#        title: Project name
+#        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+#        link_text: Link Text
+#        additional_links:
+#          - title:  Github page for project (eg. sproogen/modern-resume-theme)
+#            icon: fab fa-github
+#            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+#        quote: >
+#          Short overview of the project (optional)
+#        description: | # this will include new lines to allow paragraphs
+#          Description about the work on/with the project
+
+# Footer
+footer_show_references: false
+# references_title: References on request (Override references text)
+
+# Build settings
+# theme: modern-resume-theme (Use this is you are hosting your resume yourself)
+# remote_theme: sproogen/modern-resume-theme (Use this if you are hosting your resume on GitHub)
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
+
+exclude : [
+  "Gemfile",
+  "Gemfile.lock",
+  "node_modules",
+  "vendor/bundle/",
+  "vendor/cache/",
+  "vendor/gems/",
+  "vendor/ruby/",
+  "lib/",
+  "scripts/",
+  "docker-compose.yml",
+  ]
