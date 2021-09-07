@@ -67,6 +67,7 @@ content:
       - layout: left
         title: Tymit
         sub_title: Engineering Lead
+        contract: Full-time
         caption: March 2021 - Present
         link: https://tymit.com
         link_text: Tymit
@@ -87,6 +88,7 @@ content:
       - layout: left
         title: Tymit
         sub_title: Principal Software Engineer
+        contract: Full-time
         caption: February 2018 - March 2021
         link: https://tymit.com
         link_text: Tymit
@@ -118,6 +120,7 @@ content:
       - layout: left
         title: Universidad Rey Juan Carlos
         sub_title: Associate Lecturer
+        contract: Part-time
         caption: January 2019 - August 2021
         link: https://www.urjc.es
         link_text: URJC
@@ -127,10 +130,17 @@ content:
         description: | # this will include new lines to allow paragraphs
           Associate Lecturer in the [Department of Computing Science, Computer Architecture, Programming Languages and Systems and Statistics and Operative 
           Investigation](https://gestion2.urjc.es/pdi/departamento/Y157).
+          
+          I was responsible for the next subjects:
+
+          - High Performance Computing
+          - Distributed systems
+          - Development of applications for mobile devices	
       
       - layout: left
         title: Santander UK
         sub_title: Senior Software Engineer
+        contract: Full-time
         caption: September 2017 - February 2018
         link: https://www.santander.co.uk
         link_text: Santander UK
@@ -148,6 +158,7 @@ content:
       - layout: left
         title: Babel 
         sub_title: Senior Software Engineer
+        contract: Full-time
         caption: October 2015 - September 2017
         link: https://babel.es/en
         link_text: BABEL
@@ -166,6 +177,7 @@ content:
       - layout: left
         title: Grupo Comunica 
         sub_title: Junior Software Engineer
+        contract: Full-time
         caption: May 2013 - September 2014
         link: http://www.grupocomunica.com/
         link_text: Grupo Comunica
@@ -250,4 +262,5 @@ exclude : [
   "lib/",
   "scripts/",
   "docker-compose.yml",
+  "latex/"
   ]

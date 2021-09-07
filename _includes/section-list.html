@@ -3,7 +3,8 @@
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
       <h4>{{ item.title }}</h4>
       {%- if item.sub_title -%}<p><b>{{ item.sub_title }}</b></p>{%- endif -%}
-      {%- if item.grade -%}<p><b>{{ item.grade_title }}: {{ item.grade }}</b></p>{%- endif -%}
+      {%- if item.contract -%}<p>{{ item.contract }}</p>{%- endif -%}
+      {%- if item.grade -%}<p><b></b>{{ item.grade_title }}: {{ item.grade }}</b></p>{%- endif -%}
       {%- if item.caption -%}<p>{{ item.caption }}</p>{%- endif -%}
       {%- if item.location -%}<p>{{ item.location }}</p>{%- endif -%}
       {%- if item.link -%}
