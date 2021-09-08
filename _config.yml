@@ -77,10 +77,10 @@ content:
         description: | # this will include new lines to allow paragraphs
           I was promoted to Lead position. Key responsabilities about this role are:
 
-          - Managing engineering team.
-          - Design scalable, reliable and secure architecture solutions.
-          - Involve with stakeholders and product in the company roadmap decisioning.
-          - Continue contributing to product with customer features implementation.
+          - Managing engineering team
+          - Design scalable, reliable and secure architecture solutions
+          - To be involved with stakeholders and product in the company roadmap decisioning
+          - Continue contributing to product with customer features implementation
 
           **Tech stack**: Quarkus, Java 11+, JUnit, Micronaut, Kotlin, Grails, Groovy, Spock, AWS (SQS, SNS, RDS, EC2, SES, CloudWatch, API Gateway), PostgreSQL, MongoDB, Docker, 
           Kibana, Grafana, Prometheus.
@@ -131,7 +131,7 @@ content:
           Associate Lecturer in the [Department of Computing Science, Computer Architecture, Programming Languages and Systems and Statistics and Operative 
           Investigation](https://gestion2.urjc.es/pdi/departamento/Y157).
           
-          I was responsible for the next subjects:
+          I was in charge of the following subjects:
 
           - High Performance Computing
           - Distributed systems
@@ -150,8 +150,8 @@ content:
         description: | # this will include new lines to allow paragraphs
           Participating in several projects from a R&D department. 
 
-          - Implementing Blockchain solution for internal project.
-          - Leading OCR project for Identity document verification.
+          - Implementing Blockchain solution for internal project
+          - Leading OCR project for Identity document verification
 
           **Tech stack**: Java 11, Kotlin, Apache Kafka, Corda, Tesseract, Spring Boot, JUnit, PostgreSQL, MongoDB, Docker.
 
@@ -185,10 +185,10 @@ content:
         quote: >
           Global Telecommunications Operator
         description: | # this will include new lines to allow paragraphs
-          - Participating in the development of Android & iOS applications.
-          - Implementing Audio-Visual streaming project.
+          - Participating in the development of Android & iOS applications
+          - Implementing Audio-Visual streaming project
 
-          **Tech stack**: Java, Android SDK, Objective-C, PHP, MySQL.
+          **Tech stack**: Java, Android SDK, Objective-C, Spring Boot, JUnit, PHP, MySQL.
 
   
   - title: Education
