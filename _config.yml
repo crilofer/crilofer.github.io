@@ -10,7 +10,7 @@ name: Cristian López Fernández
 title: Engineering Lead
 email: crilopfer@gmail.com
 # email_title: Email (Email title override)
-phone: +34 667 82 61 26
+phone: (+34) 667 82 61 26 | (+971) 58 103 8117
 # phone_title: Phone (Phone title override)
 # website: Your website (eg. https://google.com)(optional)
 # website_title: Web (Website title override)
@@ -51,7 +51,7 @@ linkedin_username: crilopfer
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile_photo.jpg
 about_content: | # this will include new lines to allow paragraphs
-  I’ve continuously worked in software engineering for my <mark>whole 7+ year career</mark>.
+  I’ve continuously worked in software engineering for my <mark>whole 9+ year career</mark>.
 
   Over my career I’ve had the chance to participate in several projects and contributed to different types of <mark>system architectures, teams, products and overall tech ecosystems</mark>.
 
@@ -65,10 +65,48 @@ content:
     layout: list
     content:
       - layout: left
+        title: Baraka
+        sub_title: Director of Engineering
+        contract: Full-time
+        caption: October 2022 - Present
+        link: https://getbaraka.com
+        link_text: Baraka
+        location: Dubai (United Arab Emirates)
+        quote: >
+          Educate, enable and empower everyone to invest.
+        description: | # this will include new lines to allow paragraphs
+          Director of Engineering
+
+      - layout: left
+        title: Wio
+        sub_title: Technical Lead
+        contract: Full-time
+        caption: May 2022 - October 2022
+        link: https://wio.io
+        link_text: Wio
+        location: Abu Dhabi (United Arab Emirates)
+        quote: >
+          Banking As A Platform
+        description: | # this will include new lines to allow paragraphs
+          Leading the engineering lending platform team of Wio bank
+          
+          This was a completely new project that I started from scratch. Defining the MVP scope and platform architecture in close collaboration with the
+          main stakeholders.
+          
+          I was primarily responsible for:
+
+          - Hiring the team (Back‑end, Front‑end, DevOps, and QA)
+          - Defining internal processes
+          - Designing the system architecture
+          - Managing partnerships
+
+          **Tech stack**: Spring Boot, Java 17, Azure, Kubernetes, PostgreSQL, Kafka, among other technologies.
+
+      - layout: left
         title: Tymit
         sub_title: Engineering Lead
         contract: Full-time
-        caption: March 2021 - Present
+        caption: March 2021 - May 2022
         link: https://tymit.com
         link_text: Tymit
         location: London (United Kingdom)
