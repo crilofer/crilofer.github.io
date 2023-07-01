@@ -7,10 +7,10 @@ version: 2
 
 # Personal info
 name: Cristian López Fernández
-title: Engineering Lead
+title: Director of Engineering
 email: crilopfer@gmail.com
 # email_title: Email (Email title override)
-phone: (+34) 667 82 61 26 | (+971) 58 103 8117
+phone: (+971) 58 103 8117 | (+34) 667 82 61 26  
 # phone_title: Phone (Phone title override)
 # website: Your website (eg. https://google.com)(optional)
 # website_title: Web (Website title override)
@@ -51,14 +51,14 @@ linkedin_username: crilopfer
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile_photo.jpg
 about_content: | # this will include new lines to allow paragraphs
-  I’ve continuously worked in software engineering for my <mark>whole 9+ year career</mark>.
+  Passionate and <mark>results-driven</mark> Director of Engineering with more than 10 years of experience in the tech sector. Skilled in driving <mark>innovation</mark>, <mark>optimizing</mark> operations, and delivering <mark>cutting-edge</mark> solutions that accelerate business <mark>growth</mark>. 
+  Recognized for aligning technical strategies with business and product objectives, driving revenue generation, and ensuring compliance in complex regulatory environments.
 
-  Over my career I’ve had the chance to participate in several projects and contributed to different types of <mark>system architectures, teams, products and overall tech ecosystems</mark>.
+  Throughout my career, I have built and managed <mark>high-performing</mark> engineering teams, fostering a culture of <mark>collaboration</mark> and <mark>continuous improvement</mark>. With a strong focus on scalability, robustness, and security, I have successfully executed technical and product roadmaps to support <mark>mission-critical</mark> systems.
 
-  At my current professional position, I am responsible for multiple distributed backend teams, alongside coordinating with frontend teams and other stakeholders. 
-  My main work specifically focusses on complex architectural decisions regarding company-wide services scalability, security and reliability.
+  My expertise extends to navigating the evolving <mark>startup</mark> landscape, staying ahead of industry trends, and embracing <mark>emerging</mark> technologies. I have a proven track record of successfully collaborating with cross-functional teams, including product, marketing, data, and executives, to drive innovation and achieve shared <mark>goals</mark>.
 
-  I seek to leverage my knowledge and experience to help build <mark>customer-centric</mark> features in the product area, <mark>leading teams</mark> and helping in <mark>technical architectural designs</mark>.
+  Passionate about technology, I actively participate in industry conferences and workshops to stay updated with the latest advancements. I am committed to mentoring and developing top talent, fostering a culture of continuous learning, and empowering teams to excel.
 
 content:
   - title: Experience
@@ -75,7 +75,15 @@ content:
         quote: >
           Educate, enable and empower everyone to invest.
         description: | # this will include new lines to allow paragraphs
-          Director of Engineering
+          As Director of Engineering at Baraka, I lead a high-performing team while reporting directly to the founding team (CEO and CTO). 
+          
+          I drive innovation and develop solutions that optimize performance, scalability, and security. I work with cross-functional teams to align technology strategies with business goals and foster a collaborative and innovative culture.
+
+          My main focus is developing robust and scalable systems and using my expertise to design high-availability and low-latency infrastructure. Leverage best practices such as continuous integration, automated testing, and agile methodologies to streamline our development process and reduce time to market. 
+
+          I recruit and support top engineering talent and encourage their growth through mentoring and training programs. I foster a culture of knowledge sharing and encourage staying up to date with industry trends.
+
+          I work closely with the ExCo team and contribute to revenue generation. By providing technical insight and support, we effectively position our products, understand customer needs, and develop revenue-centric capabilities that drive customer acquisition and retention.
 
       - layout: left
         title: Wio
