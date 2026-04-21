@@ -80,6 +80,8 @@
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
+% Prevent section headings from being orphaned at the bottom of a page
+\RequirePackage{needspace}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode]{hyperref}
 \hypersetup{%
@@ -474,6 +476,12 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{http://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
         }%
+      \ifthenelse{\isundefined{\@linkedin}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\acvHeaderIconSep\@linkedin}%
+        }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
         {%
@@ -491,12 +499,6 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\acvHeaderIconSep\@stackoverflowname}%
-        }%
-      \ifthenelse{\isundefined{\@linkedin}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\acvHeaderIconSep\@linkedin}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%
@@ -562,6 +564,7 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
+  \needspace{5\baselineskip}%
   \vspace{\acvSectionTopSkip}
   \sectionstyle{#1}
   \phantomsection
@@ -679,7 +682,7 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-4.0mm}
+  \vspace{2.0mm}
 }
 
 

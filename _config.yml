@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Cristian López Fernández
-title: Director of Engineering
+title: Head of AI Engineering
 email: crilopfer@gmail.com
 # email_title: Email (Email title override)
 phone: (+971) 58 103 8117 | (+34) 667 82 61 26  
@@ -51,42 +51,71 @@ linkedin_username: crilopfer
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile_photo.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Passionate and <mark>results-driven</mark> Director of Engineering with more than 10 years of experience in the tech sector. Skilled in driving <mark>innovation</mark>, <mark>optimizing</mark> operations, and delivering <mark>cutting-edge</mark> solutions that accelerate business <mark>growth</mark>. 
-  Recognized for aligning technical strategies with business and product objectives, driving revenue generation, and ensuring compliance in complex regulatory environments.
+  Engineering leader with <mark>12+ years</mark> in tech and <mark>6+ years</mark> leading and scaling engineering teams in <mark>Fintech</mark>. Currently leading <mark>AI Engineering</mark> at Tymit, shipping customer-facing AI products and internal AI tooling that accelerate the business.
 
-  Throughout my career, I have built and managed <mark>high-performing</mark> engineering teams, fostering a culture of <mark>collaboration</mark> and <mark>continuous improvement</mark>. With a strong focus on scalability, robustness, and security, I have successfully executed technical and product roadmaps to support <mark>mission-critical</mark> systems.
+  Track record of taking products from zero to scale: <mark>Employee #1</mark> at Tymit (early monolith to microservices on AWS), a <mark>25-engineer</mark> org at Baraka (YC S21), and a <mark>10-engineer</mark> lending platform at Wio Bank built from scratch. Comfortable operating across product, data, commercial and exec teams, and owning technical strategy end-to-end in regulated environments.
 
-  My expertise extends to navigating the evolving <mark>startup</mark> landscape, staying ahead of industry trends, and embracing <mark>emerging</mark> technologies. I have a proven track record of successfully collaborating with cross-functional teams, including product, marketing, data, and executives, to drive innovation and achieve shared <mark>goals</mark>.
-
-  Passionate about technology, I actively participate in industry conferences and workshops to stay updated with the latest advancements. I am committed to mentoring and developing top talent, fostering a culture of continuous learning, and empowering teams to excel.
+  Focused on <mark>high-availability distributed systems</mark>, <mark>AI-native workflows</mark>, and growing strong engineering cultures through hiring, mentoring and clear technical direction.
 
 content:
   - title: Experience
     layout: list
     content:
       - layout: left
-        title: Baraka
+        title: Tymit
+        sub_title: Head of AI Engineering
+        contract: Full-time
+        caption: July 2025 - Present
+        link: https://tymit.com
+        link_text: Tymit
+        location: Dubai (United Arab Emirates)
+        quote: >
+          The credit card, reinvented. A Fintech bringing financial wellness to customers.
+        description: | # this will include new lines to allow paragraphs
+          Leading Tymit's **AI Engineering** practice across customer-facing AI products and internal AI tooling. Setting technical direction and staying hands-on in architecture and code for the most critical flows; partnering with Product, Data, Commercial and the exec team on the AI strategy.
+
+          - Shipped **customer-facing multi-agent systems** in the Tymit product, powering self-service and in-app decisioning, with end-to-end evaluation, tracing and regression testing before every production rollout.
+          - Designing and building a **proprietary Agentic Memory manager** to tackle one of the hardest problems in production agents: context management across long-running, multi-turn and multi-agent conversations. Coordinates short-term working memory with long-term episodic and semantic memory, and assembles retrieval-augmented context within strict token budgets — keeping agents coherent across sessions without blowing cost or latency.
+          - Built internal **developer-experience agents** that automate repetitive work across the SDLC, measurably reducing time-to-market and freeing engineers for higher-leverage work.
+          - Drove the **agentisation of internal operations** — replacing manual workflows in Support, Ops and Engineering with agents integrated into existing systems.
+          - Own the AI technical roadmap end-to-end: foundation-model evaluation and routing, orchestration stack, guardrails, evals and observability, and the AI Engineering hiring plan.
+
+      - layout: left
+        title: Tymit
+        sub_title: B2B Engineering Lead
+        contract: Full-time
+        caption: January 2024 - July 2025
+        link: https://tymit.com
+        link_text: Tymit
+        location: Dubai (United Arab Emirates)
+        quote: >
+          The credit card, reinvented. A Fintech bringing financial wellness to customers.
+        description: | # this will include new lines to allow paragraphs
+          Owned end-to-end delivery of technical integrations with strategic B2B partners, aligning engineering execution with commercial and product goals.
+
+          - Designed secure **API and microservices architecture** for partner integrations, with a focus on scalability, observability and compliance.
+          - Led and mentored the integrations engineering team; set delivery processes, technical standards and the review culture.
+          - Worked cross-functionally with Product, Commercial and external partners to unblock integrations and close partner launches.
+
+      - layout: left
+        title: Baraka (YC S21)
         sub_title: Director of Engineering
         contract: Full-time
-        caption: October 2022 - Present
+        caption: October 2022 - January 2024
         link: https://getbaraka.com
         link_text: Baraka
         location: Dubai (United Arab Emirates)
         quote: >
           Educate, enable and empower everyone to invest.
         description: | # this will include new lines to allow paragraphs
-          As Director of Engineering at Baraka, I lead a high-performing team while reporting directly to the founding team (CEO and CTO). 
-          
-          I drive innovation and develop solutions that optimize performance, scalability, and security. I work with cross-functional teams to align technology strategies with business goals and foster a collaborative and innovative culture.
+          Led an engineering organisation of 25 engineers across Back-end, Mobile, Web, DevOps and QA, reporting directly to the founding team (CEO and CTO).
 
-          My main focus is developing robust and scalable systems and using my expertise to design high-availability and low-latency infrastructure. Leverage best practices such as continuous integration, automated testing, and agile methodologies to streamline our development process and reduce time to market. 
-
-          I recruit and support top engineering talent and encourage their growth through mentoring and training programs. I foster a culture of knowledge sharing and encourage staying up to date with industry trends.
-
-          I work closely with the ExCo team and contribute to revenue generation. By providing technical insight and support, we effectively position our products, understand customer needs, and develop revenue-centric capabilities that drive customer acquisition and retention.
+          - Owned architecture for the trading platform with a focus on **high-availability, low-latency and security**, aligned with regulatory requirements.
+          - Scaled the engineering org through hiring, mentoring and training programmes; introduced technical career paths and a structured review process.
+          - Worked closely with the **ExCo team** on product positioning and revenue-generating initiatives, translating business needs into technical capabilities.
 
       - layout: left
-        title: Wio
+        title: Wio Bank
         sub_title: Technical Lead
         contract: Full-time
         caption: May 2022 - October 2022
@@ -96,19 +125,11 @@ content:
         quote: >
           Banking As A Platform
         description: | # this will include new lines to allow paragraphs
-          Leading the engineering lending platform team of Wio bank
-          
-          This was a completely new project that I started from scratch. Defining the MVP scope and platform architecture in close collaboration with the
-          main stakeholders.
-          
-          I was primarily responsible for:
+          Built Wio Bank's **lending platform from scratch**, leading a team of 10 engineers (Back-end, Front-end, DevOps and QA).
 
-          - Hiring the team (Back‑end, Front‑end, DevOps, and QA)
-          - Defining internal processes
-          - Designing the system architecture
-          - Managing partnerships
-
-          **Tech stack**: Spring Boot, Java 17, Azure, Kubernetes, PostgreSQL, Kafka, among other technologies.
+          - Defined the MVP scope and platform architecture in close collaboration with stakeholders.
+          - Hired the team and set engineering processes.
+          - Managed partner relationships and owned technical conversations with third-party providers.
 
       - layout: left
         title: Tymit
@@ -121,15 +142,10 @@ content:
         quote: >
           The credit card, reinvented. A Fintech bringing financial wellness to customers.
         description: | # this will include new lines to allow paragraphs
-          I was promoted to Lead position. Key responsabilities about this role are:
+          Promoted into the Lead role. Managed an engineering team of 15 engineers and owned backend architecture for scalable, reliable and secure systems.
 
-          - Managing engineering team
-          - Design scalable, reliable and secure architecture solutions
-          - To be involved with stakeholders and product in the company roadmap decisioning
-          - Continue contributing to product with customer features implementation
-
-          **Tech stack**: Quarkus, Java 11+, JUnit, Micronaut, Kotlin, Grails, Groovy, Spock, AWS (SQS, SNS, RDS, EC2, SES, CloudWatch, API Gateway), PostgreSQL, MongoDB, Docker, 
-          Kibana, Grafana, Prometheus.
+          - Partnered with stakeholders and Product on the company roadmap and technical decision-making.
+          - Kept hands-on contribution on customer-facing features alongside leadership responsibilities.
 
       - layout: left
         title: Tymit
@@ -140,28 +156,21 @@ content:
         link_text: Tymit
         location: London (United Kingdom)
         quote: >
-          
+
         description: | # this will include new lines to allow paragraphs
           **Employee no. 1**
 
-          I started the project from scratch. At the very beginning, in order to get an early MVP, we built a monolith system based on Grails and Groovy. After 1 year 
-          and due to the growth of the company, we started migrating our monolith architecture to microservices architecture using Quarkus and Java. The main reasons for that were scalability, 
-          continuous integration and understanding of the domain model of the business.
+          Built the initial product from scratch as a Grails/Groovy monolith to reach an early MVP. After ~1 year, led the migration to a Quarkus/Java microservices architecture to support company scale and clearer domain boundaries.
 
-          I have been involved in the whole business growth process of the company, taking decisions with stakeholders and contributing with new features for product area.
+          Contributed to business decisions alongside stakeholders, shipped core customer-facing capabilities end-to-end, and owned technical onboarding as the team grew.
 
-          As part of the team's growth, I have been mentoring all of them, giving support and helping in the onboarding task.
-
-          Some of the **customer features** I have implemented at Tymit: 
+          Key **customer features** shipped at Tymit:
 
           - Wallets integration (Apple Pay & Google Pay)
           - Open Banking: Payment Initiation Services (PIS) & Account Information Services (AIS)
           - Direct Debit
-          - Real time authorizations / transactions / payments, 3D Secure
+          - Real-time authorisations / transactions / payments, 3D Secure
           - KYC
-
-          **Tech stack**: Quarkus, Java 11+, JUnit, Micronaut, Kotlin, Grails, Groovy, Spock, AWS (SQS, SNS, RDS, EC2, SES, CloudWatch, API Gateway), PostgreSQL, MongoDB, Docker, 
-          Kibana, Grafana, Prometheus.
 
       - layout: left
         title: Universidad Rey Juan Carlos
@@ -174,14 +183,14 @@ content:
         quote: >
           “A man's college and university degrees mean nothing to me until I see what he is able to do with them.” - Henry Ford
         description: | # this will include new lines to allow paragraphs
-          Associate Lecturer in the [Department of Computing Science, Computer Architecture, Programming Languages and Systems and Statistics and Operative 
+          Associate Lecturer in the [Department of Computing Science, Computer Architecture, Programming Languages and Systems and Statistics and Operative
           Investigation](https://gestion2.urjc.es/pdi/departamento/Y157).
-          
-          I was in charge of the following subjects:
+
+          Taught the following subjects:
 
           - High Performance Computing
-          - Distributed systems
-          - Development of applications for mobile devices	
+          - Distributed Systems
+          - Mobile Application Development
       
       - layout: left
         title: Santander UK
@@ -194,12 +203,10 @@ content:
         quote: >
           A wholly owned subsidiary of the Spanish Santander Group
         description: | # this will include new lines to allow paragraphs
-          Participating in several projects from a R&D department. 
+          R&D department — several innovation projects:
 
-          - Implementing Blockchain solution for internal project
-          - Leading OCR project for Identity document verification
-
-          **Tech stack**: Java 11, Kotlin, Apache Kafka, Corda, Tesseract, Spring Boot, JUnit, PostgreSQL, MongoDB, Docker.
+          - Implemented a Blockchain solution for an internal project.
+          - Led the OCR project for identity document verification.
 
       - layout: left
         title: Babel 
@@ -212,13 +219,9 @@ content:
         quote: >
           Information Technology & Services
         description: | # this will include new lines to allow paragraphs
-          As it is a consulting company, I was participating in several projects from different companies like **BBVA**, **Orange**, 
-          **Telefónica**, **Sanitas**, **HM Hospitales**, among others.
+          IT consulting firm — delivered projects for **BBVA**, **Orange**, **Telefónica**, **Sanitas** and **HM Hospitales**, among others.
 
-          Although I participated as individual contributor most of the time, I had the opportunity of leading some teams (5-6 people) as Team lead using agile methodologies, supporting them on the technical area, contributing on 
-          technical design sessions, etc.
-
-          **Tech stack**: Java 11, Java 8, PHP, Python, Spring Boot, JUnit, Django, Liferay, PostgreSQL, MySQL, MongoDB.
+          Mostly as individual contributor; also led teams of 5-6 engineers using agile methodologies, supporting on technical design and reviews.
 
       - layout: left
         title: Grupo Comunica 
@@ -231,10 +234,8 @@ content:
         quote: >
           Global Telecommunications Operator
         description: | # this will include new lines to allow paragraphs
-          - Participating in the development of Android & iOS applications
-          - Implementing Audio-Visual streaming project
-
-          **Tech stack**: Java, Android SDK, Objective-C, Spring Boot, JUnit, PHP, MySQL.
+          - Developed Android & iOS applications.
+          - Built an audio-visual streaming project.
 
   
   - title: Education
@@ -262,9 +263,11 @@ content:
     layout: text
     content: | # this will include new lines to allow paragraphs
 
-      I love Amazon Alexa and I am contributing with skills implementations about education, mental health and leisure.
+      **Cursor Community Ambassador** (since November 2025) — actively engaged with the AI developer-tools community.
 
-      Also, I am Open Water Diver by SSI International.
+      I contribute Amazon Alexa skills focused on education, mental health and leisure.
+
+      Also, I am an SSI Open Water Diver.
   
 #  - title: Projects # Title for the section
 #    layout: list # Type of content section (list/text)
