@@ -31,7 +31,7 @@ const idx = String(index + 1).padStart(2, "0");
         )}
       </h3>
       <p class="exp-meta t-meta">
-        {exp.contract} · {exp.location}
+        {exp.contract && <>{exp.contract} · </>}{exp.location}
       </p>
     </div>
   </header>

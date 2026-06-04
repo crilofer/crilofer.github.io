@@ -37,7 +37,7 @@ export type Experience = {
   company: string;
   url?: string;
   role: string;
-  contract: "Full-time" | "Part-time" | "Contract" | "Independent";
+  contract?: "Full-time" | "Part-time" | "Contract";
   period: string;
   location: string;
   quote?: string;
@@ -66,7 +66,6 @@ export const experiences: Experience[] = [
     company: "Crilotech",
     url: "https://crilotech.com",
     role: "Founder",
-    contract: "Independent",
     period: "2025 — Present",
     location: "Remote",
     highlights: [
@@ -78,8 +77,7 @@ export const experiences: Experience[] = [
   {
     company: "Cursor",
     url: "https://cursor.com",
-    role: "Cursor Community Ambassador",
-    contract: "Independent",
+    role: "Cursor Ambassador",
     period: "Nov 2025 — Present",
     location: "Remote",
     highlights: [
