@@ -1,6 +1,9 @@
 /* ==========================================================================
    Brand: an editorial / monograph personal site
    Cristian Lopez — crilofer
+
+   Theme tokens. Two skins (light / dark), picked via [data-theme] on <html>
+   or via the prefers-color-scheme media query when no explicit choice.
    ========================================================================== */
 
 /* ---------- Design tokens ---------- */
@@ -63,24 +66,25 @@
 
 /* ---------- Dark theme ----------
    Inverts the paper/ink axis while keeping a hint of the same warm hue,
-   so the brand reads as the same site at night — not a different site. */
+   so the brand reads as the same site at night — not a different site.
+   Contrast budget: --ink on --paper ≥ 12:1, --ink-2 ≥ 7:1, --ink-3 ≥ 4.5:1. */
 [data-theme="dark"] {
-  --paper:        oklch(14% 0.012 50);
-  --paper-2:      oklch(19% 0.014 50);
-  --ink:          oklch(92% 0.012 85);
-  --ink-2:        oklch(72% 0.012 85);
-  --ink-3:        oklch(55% 0.015 60);
-  --rule:         oklch(28% 0.015 50);
-  --accent:       oklch(72% 0.14 45);       /* a touch lighter for contrast on dark */
-  --accent-soft:  oklch(72% 0.14 45 / 0.18);
-  --accent-2:     oklch(60% 0.1 160);
+  --paper:        oklch(15% 0.012 50);
+  --paper-2:      oklch(20% 0.014 50);
+  --ink:          oklch(94% 0.012 85);
+  --ink-2:        oklch(78% 0.012 85);
+  --ink-3:        oklch(66% 0.015 60);
+  --rule:         oklch(34% 0.015 50);
+  --accent:       oklch(74% 0.14 45);       /* a touch lighter for contrast on dark */
+  --accent-soft:  oklch(74% 0.14 45 / 0.18);
+  --accent-2:     oklch(62% 0.1 160);
 
   /* In dark mode, the featured card is the light card on a dark page.
      Tokens flip so the card still reads as the inverse of the body. */
   --feat-bg:      var(--paper);
   --feat-fg:      var(--ink);
-  --feat-fg-2:    oklch(35% 0.02 50);
-  --feat-fg-3:    oklch(45% 0.02 50);
+  --feat-fg-2:    oklch(38% 0.02 50);
+  --feat-fg-3:    oklch(50% 0.02 50);
   --feat-accent:  oklch(50% 0.16 38);
   --feat-rule:    oklch(80% 0.02 50);
 
@@ -92,19 +96,19 @@
    which always wins. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --paper:        oklch(14% 0.012 50);
-    --paper-2:      oklch(19% 0.014 50);
-    --ink:          oklch(92% 0.012 85);
-    --ink-2:        oklch(72% 0.012 85);
-    --ink-3:        oklch(55% 0.015 60);
-    --rule:         oklch(28% 0.015 50);
-    --accent:       oklch(72% 0.14 45);
-    --accent-soft:  oklch(72% 0.14 45 / 0.18);
-    --accent-2:     oklch(60% 0.1 160);
+    --paper:        oklch(15% 0.012 50);
+    --paper-2:      oklch(20% 0.014 50);
+    --ink:          oklch(94% 0.012 85);
+    --ink-2:        oklch(78% 0.012 85);
+    --ink-3:        oklch(66% 0.015 60);
+    --rule:         oklch(34% 0.015 50);
+    --accent:       oklch(74% 0.14 45);
+    --accent-soft:  oklch(74% 0.14 45 / 0.18);
+    --accent-2:     oklch(62% 0.1 160);
     --feat-bg:      var(--paper);
     --feat-fg:      var(--ink);
-    --feat-fg-2:    oklch(35% 0.02 50);
-    --feat-fg-3:    oklch(45% 0.02 50);
+    --feat-fg-2:    oklch(38% 0.02 50);
+    --feat-fg-3:    oklch(50% 0.02 50);
     --feat-accent:  oklch(50% 0.16 38);
     --feat-rule:    oklch(80% 0.02 50);
     color-scheme: dark;

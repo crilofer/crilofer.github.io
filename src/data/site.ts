@@ -255,6 +255,7 @@ export const projects: Project[] = [
       "Codifies engineering conventions and review patterns into reusable agent skills.",
       "Tight feedback loop with the engineering team — usage data drives the roadmap.",
     ],
+    link: { label: "Tymit", href: "https://tymit.com" },
     stack: ["Agents", "Internal tools", "DX"],
     kind: "ai",
   },
@@ -356,7 +357,7 @@ export const education: Education[] = [
   {
     school: "Universidad de Córdoba",
     url: "https://www.uco.es",
-    degree: "BEng, Computer Engineering",
+    degree: "BSc, Computer Engineering",
     grade: "B+",
     period: "2010 — 2014",
     project: {

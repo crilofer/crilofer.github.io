@@ -73,7 +73,7 @@ const stats = [
   <section class="now">
     <div class="wrap now-grid">
       <header class="sec-head">
-        <p class="t-eyebrow">§ 01 — Now</p>
+        <p class="t-eyebrow">01 — Now</p>
         <h2 class="sec-title">What I'm doing today.</h2>
       </header>
 
@@ -104,7 +104,7 @@ const stats = [
   <section class="traj">
     <div class="wrap traj-grid">
       <header class="sec-head">
-        <p class="t-eyebrow">§ 02 — Trajectory</p>
+        <p class="t-eyebrow">02 — Trajectory</p>
         <h2 class="sec-title">A career arc, in<br />five movements.</h2>
       </header>
 
@@ -145,7 +145,7 @@ const stats = [
     <div class="wrap">
       <header class="sec-head sec-head--row">
         <div>
-          <p class="t-eyebrow">§ 03 — Selected</p>
+          <p class="t-eyebrow">03 — Selected</p>
           <h2 class="sec-title">Bodies of work.</h2>
         </div>
         <a class="t-mono sel-link" href="/projects">All projects ↗</a>
@@ -168,7 +168,7 @@ const stats = [
   <section class="about">
     <div class="wrap about-grid">
       <header class="sec-head">
-        <p class="t-eyebrow">§ 04 — About</p>
+        <p class="t-eyebrow">04 — About</p>
         <h2 class="sec-title">A short biography.</h2>
       </header>
 
@@ -181,26 +181,50 @@ const stats = [
 
         <div class="about-meta">
           <div>
-            <p class="t-eyebrow">Education</p>
-            <ul class="about-list">
-              {education.map((ed) => (
-                <li>
-                  <strong class="about-strong">{ed.degree}</strong>
-                  <span class="t-meta"> — {ed.school}, {ed.period}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p class="t-eyebrow">Now reading</p>
+            <p class="t-eyebrow">In short</p>
             <p class="about-reading">
-              <em>Designing Data-Intensive Applications</em> — Martin Kleppmann.
+              Independent engineering studio on the side. Outside of work:
+              reading, writing small software, diving.
             </p>
-            <p class="t-eyebrow" style="margin-top: var(--s-3)">Course</p>
-            <p class="about-reading">SSI Open Water Diver.</p>
+            <p class="t-eyebrow" style="margin-top: var(--s-3)">Diving</p>
+            <p class="about-reading">PADI Advanced Open Water Diver.</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <hr class="hairline" />
+
+  <!-- =========================== EDUCATION =========================== -->
+  <section class="edu">
+    <div class="wrap edu-grid">
+      <header class="sec-head">
+        <p class="t-eyebrow">05 — Education</p>
+        <h2 class="sec-title">A formal record,<br />two degrees.</h2>
+      </header>
+      <ol class="edu-list" role="list">
+        {education.map((ed, i) => (
+          <li class="edu-item">
+            <span class="edu-year t-mono">{ed.period}</span>
+            <div class="edu-body">
+              <h3 class="edu-school">
+                {ed.url ? (
+                  <a class="linklike" href={ed.url} rel="noopener">{ed.school}</a>
+                ) : (
+                  <span>{ed.school}</span>
+                )}
+              </h3>
+              <p class="edu-degree">{ed.degree} <span class="t-meta">· grade {ed.grade}</span></p>
+              {ed.project && (
+                <p class="edu-project">
+                  <em>{ed.project.name}</em> — {ed.project.description}
+                </p>
+              )}
+            </div>
+          </li>
+        ))}
+      </ol>
     </div>
   </section>
 
@@ -210,7 +234,7 @@ const stats = [
   <section class="contact">
     <div class="wrap contact-grid">
       <header class="sec-head">
-        <p class="t-eyebrow">§ 05 — Contact</p>
+        <p class="t-eyebrow">06 — Contact</p>
         <h2 class="sec-title">A line, a meeting,<br />a long email.</h2>
       </header>
       <div class="contact-body">
@@ -497,6 +521,53 @@ const stats = [
     letter-spacing: -0.015em;
   }
   .contact-cta { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+  /* ============== EDUCATION ============== */
+  .edu { padding: var(--s-7) 0; }
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    gap: var(--s-6);
+    align-items: start;
+  }
+  .edu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .edu-item {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: var(--s-4);
+    padding: var(--s-4) 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .edu-year {
+    color: var(--accent);
+    font-size: var(--t-sm);
+    font-variant-numeric: tabular-nums;
+  }
+  .edu-body { min-width: 0; }
+  .edu-school {
+    font-family: var(--font-display);
+    font-size: var(--t-xl);
+    font-weight: 450;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0 0 0.25rem;
+  }
+  .edu-degree { margin: 0; color: var(--ink-2); font-size: var(--t-base); }
+  .edu-project { margin: 0.4rem 0 0; color: var(--ink-2); font-size: var(--t-sm); }
+  @media (max-width: 980px) {
+    .edu-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .edu-item { grid-template-columns: 5rem 1fr; gap: var(--s-3); }
+  }
   @media (max-width: 1080px) {
     .contact-grid { grid-template-columns: 1fr; }
   }
