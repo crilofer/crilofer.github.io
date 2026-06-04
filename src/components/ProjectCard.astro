@@ -78,7 +78,7 @@ const kindLabel: Record<Project["kind"], string> = {
   .proj--featured {
     background: var(--feat-bg);
     color: var(--feat-fg);
-    border-color: var(--feat-bg);
+    border-color: var(--feat-rule);
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     grid-template-areas:
@@ -88,6 +88,17 @@ const kindLabel: Record<Project["kind"], string> = {
       "foot foot";
     gap: var(--s-4) var(--s-5);
     align-items: start;
+    position: relative;
+    overflow: hidden;
+  }
+  .proj--featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--feat-accent);
   }
   .proj--featured:hover { background: color-mix(in oklab, var(--feat-bg) 88%, var(--feat-fg) 12%); }
   .proj--featured .proj-head { grid-area: head; }
