@@ -82,12 +82,13 @@
   --accent-2:     oklch(64% 0.1 160);
 
   /* In dark mode, the featured card is the light card on a dark page.
-     Tokens flip so the card still reads as the inverse of the body. */
-  --feat-bg:      var(--paper);
-  --feat-fg:      var(--ink);
-  --feat-fg-2:    oklch(40% 0.02 50);
+     The card inverts from the body so it always reads as the "hero".
+     --feat-fg-* tokens are dark, designed to be readable on the light card. */
+  --feat-bg:      oklch(94% 0.012 85);
+  --feat-fg:      oklch(20% 0.02 50);
+  --feat-fg-2:    oklch(38% 0.02 50);
   --feat-fg-3:    oklch(52% 0.02 50);
-  --feat-accent:  oklch(50% 0.16 38);
+  --feat-accent:  oklch(52% 0.16 38);
   --feat-rule:    oklch(80% 0.02 50);
 
   color-scheme: dark;
@@ -107,11 +108,11 @@
     --accent:       oklch(76% 0.14 45);
     --accent-soft:  oklch(76% 0.14 45 / 0.20);
     --accent-2:     oklch(64% 0.1 160);
-    --feat-bg:      var(--paper);
-    --feat-fg:      var(--ink);
-    --feat-fg-2:    oklch(40% 0.02 50);
+    --feat-bg:      oklch(94% 0.012 85);
+    --feat-fg:      oklch(20% 0.02 50);
+    --feat-fg-2:    oklch(38% 0.02 50);
     --feat-fg-3:    oklch(52% 0.02 50);
-    --feat-accent:  oklch(50% 0.16 38);
+    --feat-accent:  oklch(52% 0.16 38);
     --feat-rule:    oklch(80% 0.02 50);
     color-scheme: dark;
   }
