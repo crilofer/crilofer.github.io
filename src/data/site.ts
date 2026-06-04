@@ -42,24 +42,9 @@ export type Experience = {
   location: string;
   quote?: string;
   highlights: string[]; // plain text bullets; renderers add the marks
-  tags: string[];
 };
 
 export const experiences: Experience[] = [
-  {
-    company: "Crilotech",
-    url: "https://crilotech.com",
-    role: "Founder",
-    contract: "Independent",
-    period: "2025 — Present",
-    location: "Remote",
-    highlights: [
-      "Solo engineering studio — design, build and ship end-to-end.",
-      "Work across AI features in production, mobile and web platforms, and custom software. Technology agnostic — pitched on outcomes, not stacks.",
-      "A few clients, scoped tight, high craft.",
-    ],
-    tags: ["Solo founder", "AI", "Mobile", "Web", "End-to-end"],
-  },
   {
     company: "Tymit",
     url: "https://tymit.com",
@@ -76,7 +61,31 @@ export const experiences: Experience[] = [
       "Drove the agentisation of internal operations across Support, Ops and Engineering.",
       "Own the AI technical roadmap end-to-end: foundation-model evaluation, orchestration stack, guardrails, evals, observability, and the AI Engineering hiring plan.",
     ],
-    tags: ["AI Engineering", "Multi-agent systems", "Evals", "LLM ops", "Leadership"],
+  },
+  {
+    company: "Crilotech",
+    url: "https://crilotech.com",
+    role: "Founder",
+    contract: "Independent",
+    period: "2025 — Present",
+    location: "Remote",
+    highlights: [
+      "Engineering studio — design, build and ship end-to-end.",
+      "Work across AI features in production, mobile and web platforms, and custom software. Technology agnostic — pitched on outcomes, not stacks.",
+      "A few clients, scoped tight, high craft.",
+    ],
+  },
+  {
+    company: "Cursor",
+    url: "https://cursor.com",
+    role: "Cursor Community Ambassador",
+    contract: "Independent",
+    period: "Nov 2025 — Present",
+    location: "Remote",
+    highlights: [
+      "Actively engaged with the AI developer-tools community.",
+      "Sharing patterns, feedback, and production learnings from building agentic systems at scale.",
+    ],
   },
   {
     company: "Tymit",
@@ -92,7 +101,6 @@ export const experiences: Experience[] = [
       "Led and mentored the integrations engineering team; set delivery processes, technical standards and the review culture.",
       "Worked cross-functionally with Product, Commercial and external partners to unblock integrations and close launches.",
     ],
-    tags: ["Microservices", "API design", "B2B", "Leadership"],
   },
   {
     company: "Baraka",
@@ -108,7 +116,6 @@ export const experiences: Experience[] = [
       "Scaled the engineering org through hiring, mentoring and training programmes; introduced technical career paths and a structured review process.",
       "Worked closely with the ExCo team on product positioning and revenue-generating initiatives.",
     ],
-    tags: ["Trading platform", "Low latency", "Org design", "Hiring"],
   },
   {
     company: "Wio Bank",
@@ -123,7 +130,6 @@ export const experiences: Experience[] = [
       "Defined MVP scope and platform architecture in close collaboration with stakeholders.",
       "Hired the team, set engineering processes, and managed third-party provider relationships end-to-end.",
     ],
-    tags: ["Lending", "Greenfield", "Team building"],
   },
   {
     company: "Tymit",
@@ -138,7 +144,6 @@ export const experiences: Experience[] = [
       "Partnered with stakeholders and Product on the company roadmap and technical decision-making.",
       "Kept hands-on contribution on customer-facing features alongside leadership responsibilities.",
     ],
-    tags: ["Backend", "Team lead", "Architecture"],
   },
   {
     company: "Tymit",
@@ -153,7 +158,6 @@ export const experiences: Experience[] = [
       "Shipped core customer-facing capabilities end-to-end: Apple Pay & Google Pay wallets, Open Banking (PIS/AIS), Direct Debit, real-time authorisations and 3D Secure, and KYC.",
       "Owned technical onboarding as the team grew.",
     ],
-    tags: ["Greenfield", "Microservices", "Payments", "Open Banking"],
   },
   {
     company: "Universidad Rey Juan Carlos",
@@ -167,7 +171,6 @@ export const experiences: Experience[] = [
       "Associate Lecturer in the Department of Computing Science, Computer Architecture, Programming Languages and Systems, and Statistics and Operative Investigation.",
       "Taught High Performance Computing, Distributed Systems, and Mobile Application Development.",
     ],
-    tags: ["Teaching", "Distributed systems"],
   },
   {
     company: "Santander UK",
@@ -182,7 +185,6 @@ export const experiences: Experience[] = [
       "Implemented a Blockchain solution for an internal project.",
       "Led the OCR project for identity document verification.",
     ],
-    tags: ["R&D", "Blockchain", "OCR"],
   },
   {
     company: "BABEL",
@@ -196,7 +198,6 @@ export const experiences: Experience[] = [
       "Delivered projects for BBVA, Orange, Telefónica, Sanitas and HM Hospitales.",
       "Mostly an individual contributor; also led teams of 5–6 engineers using agile methodologies, supporting on technical design and reviews.",
     ],
-    tags: ["Consulting", "Enterprise"],
   },
   {
     company: "Grupo Comunica",
@@ -210,7 +211,6 @@ export const experiences: Experience[] = [
       "Developed Android & iOS applications.",
       "Built an audio-visual streaming project.",
     ],
-    tags: ["Mobile", "Streaming"],
   },
 ];
 
@@ -222,7 +222,6 @@ export type Project = {
   blurb: string;
   highlights: string[];
   link?: { label: string; href: string };
-  stack: string[];
   kind: "ai" | "platform" | "people" | "open-source";
 };
 
@@ -240,7 +239,6 @@ export const projects: Project[] = [
       "Retrieval-augmented context assembly under hard token budgets, with evals and tracing integrated into the rollout pipeline.",
     ],
     link: { label: "Tymit", href: "https://tymit.com" },
-    stack: ["LLM orchestration", "Vector retrieval", "Evals", "Observability"],
     kind: "ai",
   },
   {
@@ -255,7 +253,6 @@ export const projects: Project[] = [
       "Designed for production: traces shipped to observability, failures routed to humans, costs metered per intent.",
     ],
     link: { label: "Tymit", href: "https://tymit.com" },
-    stack: ["Agents", "Tool use", "Guardrails", "Evals"],
     kind: "ai",
   },
   {
@@ -270,7 +267,6 @@ export const projects: Project[] = [
       "Tight feedback loop with the engineering team — usage data drives the roadmap.",
     ],
     link: { label: "Tymit", href: "https://tymit.com" },
-    stack: ["Agents", "Internal tools", "DX"],
     kind: "ai",
   },
   {
@@ -285,7 +281,6 @@ export const projects: Project[] = [
       "Migrated to a microservices architecture to support scale and clearer domain boundaries.",
     ],
     link: { label: "Tymit", href: "https://tymit.com" },
-    stack: ["Grails", "Quarkus", "AWS", "Microservices", "Payments"],
     kind: "platform",
   },
   {
@@ -300,7 +295,6 @@ export const projects: Project[] = [
       "Hired the team, set engineering processes, and managed third-party provider relationships end-to-end.",
     ],
     link: { label: "Wio", href: "https://wio.io" },
-    stack: ["Lending", "Greenfield", "Cloud"],
     kind: "platform",
   },
   {
@@ -315,7 +309,6 @@ export const projects: Project[] = [
       "Owned architecture for the trading platform with a focus on high-availability, low-latency and security.",
     ],
     link: { label: "Baraka", href: "https://getbaraka.com" },
-    stack: ["Org design", "Trading platform", "Hiring", "Mentoring"],
     kind: "people",
   },
   {
@@ -328,7 +321,6 @@ export const projects: Project[] = [
     highlights: [
       "Computer vision, on-device rendering, and the practical constraints of mobile AR hardware.",
     ],
-    stack: ["Computer vision", "Mobile", "AR"],
     kind: "open-source",
   },
   {
@@ -341,7 +333,6 @@ export const projects: Project[] = [
     highlights: [
       "Where the engineering habit started: tiny computer, real wiring, a thing you could turn the lights on with.",
     ],
-    stack: ["Raspberry Pi", "IoT", "Linux"],
     kind: "open-source",
   },
 ];

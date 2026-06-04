@@ -52,9 +52,6 @@ const kindLabel: Record<Project["kind"], string> = {
       <span>{project.role}</span>
       <span class="t-meta">· {project.context}</span>
     </p>
-    <ul class="proj-stack" role="list" aria-label="Stack">
-      {project.stack.map((s) => <li class="t-mono">{s}</li>)}
-    </ul>
   </footer>
 </article>
 
@@ -122,7 +119,6 @@ const kindLabel: Record<Project["kind"], string> = {
   .proj--featured .t-eyebrow { color: var(--feat-fg-3); }
   .proj--featured .proj-role span { color: var(--feat-fg); }
   .proj--featured .proj-role .t-meta { color: var(--feat-fg-3); }
-  .proj--featured .proj-stack li { border-color: var(--feat-rule); color: var(--feat-fg-2); }
 
   .proj-head {
     display: flex;
@@ -190,21 +186,6 @@ const kindLabel: Record<Project["kind"], string> = {
     font-size: var(--t-sm);
   }
   .proj-role .t-eyebrow { font-size: 0.65rem; }
-  .proj-stack {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-  }
-  .proj-stack li {
-    font-size: 0.7rem;
-    color: var(--ink-2);
-    padding: 0.2em 0.5em;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-  }
 
   /* Responsive */
   @media (max-width: 720px) {

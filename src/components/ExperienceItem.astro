@@ -46,10 +46,6 @@ const idx = String(index + 1).padStart(2, "0");
       </li>
     ))}
   </ul>
-
-  <ul class="exp-tags" role="list" aria-label="Topics">
-    {exp.tags.map((tag) => <li class="exp-tag t-mono">{tag}</li>)}
-  </ul>
 </article>
 
 <style>
@@ -110,26 +106,9 @@ const idx = String(index + 1).padStart(2, "0");
   }
   .exp-bullet { color: var(--accent); font-family: var(--font-mono); }
 
-  .exp-tags {
-    list-style: none;
-    margin: 0 0 0 9rem;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-  .exp-tag {
-    font-size: var(--t-xs);
-    color: var(--ink-2);
-    padding: 0.25em 0.6em;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    background: color-mix(in oklab, var(--paper) 70%, var(--paper-2));
-  }
-
   @media (max-width: 800px) {
     .exp-head { grid-template-columns: 1fr; gap: 0.5rem; }
     .exp-id { display: flex; gap: 0.8rem; align-items: baseline; }
-    .exp-quote, .exp-list, .exp-tags { margin-left: 0; }
+    .exp-quote, .exp-list { margin-left: 0; }
   }
 </style>
