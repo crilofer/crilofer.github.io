@@ -67,24 +67,26 @@
 /* ---------- Dark theme ----------
    Inverts the paper/ink axis while keeping a hint of the same warm hue,
    so the brand reads as the same site at night — not a different site.
-   Contrast budget: --ink on --paper ≥ 12:1, --ink-2 ≥ 7:1, --ink-3 ≥ 4.5:1. */
+   Contrast budget: every text token on --paper ≥ 4.5:1 (WCAG AA for
+   normal text). The three levels are tighter than typical "dim the
+   secondary" patterns because the previous budget read as ghosted. */
 [data-theme="dark"] {
   --paper:        oklch(15% 0.012 50);
   --paper-2:      oklch(20% 0.014 50);
-  --ink:          oklch(94% 0.012 85);
-  --ink-2:        oklch(78% 0.012 85);
-  --ink-3:        oklch(66% 0.015 60);
+  --ink:          oklch(96% 0.012 85);
+  --ink-2:        oklch(88% 0.012 85);
+  --ink-3:        oklch(78% 0.015 60);
   --rule:         oklch(34% 0.015 50);
-  --accent:       oklch(74% 0.14 45);       /* a touch lighter for contrast on dark */
-  --accent-soft:  oklch(74% 0.14 45 / 0.18);
-  --accent-2:     oklch(62% 0.1 160);
+  --accent:       oklch(76% 0.14 45);       /* a touch lighter for contrast on dark */
+  --accent-soft:  oklch(76% 0.14 45 / 0.20);
+  --accent-2:     oklch(64% 0.1 160);
 
   /* In dark mode, the featured card is the light card on a dark page.
      Tokens flip so the card still reads as the inverse of the body. */
   --feat-bg:      var(--paper);
   --feat-fg:      var(--ink);
-  --feat-fg-2:    oklch(38% 0.02 50);
-  --feat-fg-3:    oklch(50% 0.02 50);
+  --feat-fg-2:    oklch(40% 0.02 50);
+  --feat-fg-3:    oklch(52% 0.02 50);
   --feat-accent:  oklch(50% 0.16 38);
   --feat-rule:    oklch(80% 0.02 50);
 
@@ -98,17 +100,17 @@
   :root:not([data-theme]) {
     --paper:        oklch(15% 0.012 50);
     --paper-2:      oklch(20% 0.014 50);
-    --ink:          oklch(94% 0.012 85);
-    --ink-2:        oklch(78% 0.012 85);
-    --ink-3:        oklch(66% 0.015 60);
+    --ink:          oklch(96% 0.012 85);
+    --ink-2:        oklch(88% 0.012 85);
+    --ink-3:        oklch(78% 0.015 60);
     --rule:         oklch(34% 0.015 50);
-    --accent:       oklch(74% 0.14 45);
-    --accent-soft:  oklch(74% 0.14 45 / 0.18);
-    --accent-2:     oklch(62% 0.1 160);
+    --accent:       oklch(76% 0.14 45);
+    --accent-soft:  oklch(76% 0.14 45 / 0.20);
+    --accent-2:     oklch(64% 0.1 160);
     --feat-bg:      var(--paper);
     --feat-fg:      var(--ink);
-    --feat-fg-2:    oklch(38% 0.02 50);
-    --feat-fg-3:    oklch(50% 0.02 50);
+    --feat-fg-2:    oklch(40% 0.02 50);
+    --feat-fg-3:    oklch(52% 0.02 50);
     --feat-accent:  oklch(50% 0.16 38);
     --feat-rule:    oklch(80% 0.02 50);
     color-scheme: dark;
