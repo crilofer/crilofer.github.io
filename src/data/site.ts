@@ -37,7 +37,7 @@ export type Experience = {
   company: string;
   url?: string;
   role: string;
-  contract: "Full-time" | "Part-time" | "Contract";
+  contract: "Full-time" | "Part-time" | "Contract" | "Independent";
   period: string;
   location: string;
   quote?: string;
@@ -46,6 +46,20 @@ export type Experience = {
 };
 
 export const experiences: Experience[] = [
+  {
+    company: "Crilotech",
+    url: "https://crilotech.com",
+    role: "Founder & Principal Engineer",
+    contract: "Independent",
+    period: "2025 — Present",
+    location: "Remote",
+    highlights: [
+      "Solo engineering studio — design, build and ship end-to-end, on the side of the day job.",
+      "Work across AI features in production, mobile and web platforms, and custom software. Technology agnostic — pitched on outcomes, not stacks.",
+      "A few clients, scoped tight, high craft.",
+    ],
+    tags: ["Solo founder", "AI", "Mobile", "Web", "End-to-end"],
+  },
   {
     company: "Tymit",
     url: "https://tymit.com",

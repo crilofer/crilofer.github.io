@@ -4,8 +4,12 @@ import { profile, experiences, projects, education } from "../data/site.ts";
 import ExperienceItem from "../components/ExperienceItem.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
-// Pick the most "current" experience for the hero callout
-const current = experiences[0];
+// Two concurrent current roles. The Tymit role is the headline (matches
+// the lead in the hero); Crilotech is the side studio and shown second.
+const currentRoles = experiences.filter((e) => e.period.includes("Present"));
+const dayJob = currentRoles.find((e) => e.company === "Tymit") ?? currentRoles[0];
+const sideStudio = currentRoles.find((e) => e.company === "Crilotech");
+
 // Featured + supporting projects for the home grid
 const featured = projects[0]; // Agentic Memory
 const supporting = projects.slice(1, 5);
@@ -79,19 +83,27 @@ const stats = [
 
       <div class="now-body">
         <p class="now-role t-mono">
-          {current.role} <span class="now-at">@</span>
-          <a class="linklike" href={current.url} rel="noopener">{current.company}</a>
-          <span class="t-meta"> — {current.location}</span>
+          {dayJob.role} <span class="now-at">@</span>
+          <a class="linklike" href={dayJob.url} rel="noopener">{dayJob.company}</a>
+          <span class="t-meta"> — {dayJob.location}</span>
         </p>
 
         <ul class="now-list" role="list">
-          {current.highlights.slice(0, 4).map((h) => (
+          {dayJob.highlights.slice(0, 4).map((h) => (
             <li>
               <span class="exp-bullet" aria-hidden="true">›</span>
               <span>{h}</span>
             </li>
           ))}
         </ul>
+
+        {sideStudio && (
+          <p class="now-side t-meta">
+            Also: <strong class="now-side-strong">{sideStudio.role}</strong> at{" "}
+            <a class="linklike" href={sideStudio.url} rel="noopener">{sideStudio.company}</a>
+            <span> — {sideStudio.location}. {sideStudio.highlights[0]}</span>
+          </p>
+        )}
 
         <a class="arrow linklike now-more" href="/work">Full work history</a>
       </div>
@@ -366,6 +378,15 @@ const stats = [
   }
   .exp-bullet { color: var(--accent); font-family: var(--font-mono); }
   .now-more { font-size: var(--t-sm); }
+  .now-side {
+    margin: 0 0 var(--s-3);
+    padding: var(--s-3) var(--s-3);
+    border-left: 2px solid var(--rule);
+    font-size: var(--t-sm);
+    color: var(--ink-2);
+    max-width: 70ch;
+  }
+  .now-side-strong { color: var(--ink); font-weight: 500; }
 
   /* ============== TRAJECTORY ============== */
   .traj { padding: var(--s-7) 0; }
