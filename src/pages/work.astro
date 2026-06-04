@@ -1,0 +1,90 @@
+---
+import Base from "../layouts/Base.astro";
+import ExperienceItem from "../components/ExperienceItem.astro";
+import { experiences, education } from "../data/site.ts";
+---
+<Base title="Work" description="A complete record of roles, places and the things shipped along the way.">
+  <section class="page-head">
+    <div class="wrap page-head-grid">
+      <div>
+        <p class="t-eyebrow">§ Work — Full record</p>
+        <h1 class="page-title">A timeline of<br />roles &amp; shipped work.</h1>
+      </div>
+      <p class="t-lead page-lead">
+        Twelve years in software, six leading teams in fintech. Below, in
+        reverse-chronological order, the roles that taught me the most.
+      </p>
+    </div>
+  </section>
+
+  <hr class="hairline" />
+
+  <section class="page-body">
+    <div class="wrap page-grid">
+      <aside class="page-aside">
+        <p class="t-eyebrow">Reading guide</p>
+        <p class="aside-text">
+          Each entry is the role, the period, and the things I owned or
+          shipped. The quote is how the company described itself, in its
+          own words, at the time.
+        </p>
+        <p class="t-eyebrow" style="margin-top: var(--s-4)">Also</p>
+        <ul class="aside-list">
+          {education.map((ed) => (
+            <li>
+              <strong>{ed.degree}</strong>
+              <br />
+              <span class="t-meta">{ed.school} · {ed.period}</span>
+            </li>
+          ))}
+        </ul>
+      </aside>
+
+      <div class="exp-list" role="list">
+        {experiences.map((exp, i) => (
+          <ExperienceItem exp={exp} index={i} />
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .page-head { padding: var(--s-7) 0 var(--s-6); }
+  .page-head-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--s-6);
+    align-items: end;
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: var(--t-4xl);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.0;
+    margin: var(--s-3) 0 0;
+  }
+  .page-lead { max-width: 44ch; }
+
+  .page-body { padding: var(--s-7) 0 var(--s-8); }
+  .page-grid {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    gap: var(--s-6);
+    align-items: start;
+  }
+  .page-aside {
+    position: sticky;
+    top: 6rem;
+    align-self: start;
+  }
+  .aside-text { font-size: var(--t-sm); color: var(--ink-2); margin: 0.4rem 0 0; max-width: 24ch; }
+  .aside-list { list-style: none; padding: 0; margin: 0.5rem 0 0; display: grid; gap: 0.7rem; font-size: var(--t-sm); }
+
+  @media (max-width: 980px) {
+    .page-head-grid { grid-template-columns: 1fr; }
+    .page-grid { grid-template-columns: 1fr; }
+    .page-aside { position: static; }
+  }
+</style>

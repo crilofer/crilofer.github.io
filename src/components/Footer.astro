@@ -1,0 +1,78 @@
+---
+import { profile, contact } from "../data/site.ts";
+
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <section class="footer-col">
+      <p class="t-eyebrow">Colophon</p>
+      <p class="footer-text">
+        <em>Volume 01</em> — a small monograph on building AI-native systems
+        and engineering teams that ship. Set in <span class="t-mono">Fraunces</span>
+        & <span class="t-mono">Inter Tight</span>. Composed with Astro.
+      </p>
+    </section>
+
+    <section class="footer-col">
+      <p class="t-eyebrow">Elsewhere</p>
+      <ul class="footer-links">
+        {contact.map((c) => (
+          <li>
+            <a class="linklike" href={c.href} rel={c.label === "Email" ? undefined : "me"}>
+              {c.label} ↗
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="footer-col">
+      <p class="t-eyebrow">Coordinates</p>
+      <ul class="footer-list">
+        <li>{profile.location}</li>
+        <li class="t-meta">From {profile.origin}</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="wrap footer-base">
+    <p class="t-mono footer-fineprint">
+      © {year} {profile.name} · Built with care in Dubai.
+    </p>
+    <p class="t-mono footer-fineprint">
+      v01.26 — last update {new Date().toISOString().slice(0, 10)}
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--s-8);
+    border-top: 1px solid var(--rule);
+    padding: var(--s-7) 0 var(--s-5);
+    background: var(--paper);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: var(--s-6);
+  }
+  .footer-col p:first-child { margin: 0 0 0.6em; }
+  .footer-text { font-size: var(--t-sm); color: var(--ink-2); margin: 0; max-width: 42ch; }
+  .footer-links, .footer-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.35em; }
+  .footer-list li { color: var(--ink-2); font-size: var(--t-sm); }
+  .footer-base {
+    margin-top: var(--s-6);
+    padding-top: var(--s-3);
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .footer-fineprint { color: var(--ink-3); font-size: var(--t-xs); margin: 0; }
+  @media (max-width: 720px) {
+    .footer-grid { grid-template-columns: 1fr; gap: var(--s-5); }
+  }
+</style>

@@ -1,2 +1,12 @@
 .sass-cache
 .DS_Store
+
+# Astro
+node_modules/
+dist/
+.astro/
+.env
+.env.production
+
+# Legacy Jekyll
+_legacy-jekyll/

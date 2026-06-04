@@ -1,0 +1,135 @@
+---
+import type { Experience } from "../data/site.ts";
+
+interface Props {
+  exp: Experience;
+  index: number;
+  expanded?: boolean;
+}
+
+const { exp, index, expanded = true } = Astro.props;
+const idx = String(index + 1).padStart(2, "0");
+---
+<article class="exp" data-expanded={expanded}>
+  <header class="exp-head">
+    <div class="exp-id">
+      <span class="exp-num t-mono">{idx}</span>
+      <span class="exp-period t-mono">{exp.period}</span>
+    </div>
+    <div class="exp-title">
+      <h3 class="exp-role">
+        {exp.role}
+        {exp.url ? (
+          <span class="exp-at"> @ </span>
+        ) : null}
+        {exp.url ? (
+          <a class="exp-company linklike" href={exp.url} rel="noopener">
+            {exp.company}
+          </a>
+        ) : (
+          <span class="exp-company">{exp.company}</span>
+        )}
+      </h3>
+      <p class="exp-meta t-meta">
+        {exp.contract} · {exp.location}
+      </p>
+    </div>
+  </header>
+
+  {exp.quote && <p class="exp-quote italic">“{exp.quote}”</p>}
+
+  <ul class="exp-list" role="list">
+    {exp.highlights.map((h) => (
+      <li>
+        <span class="exp-bullet" aria-hidden="true">›</span>
+        <span class="exp-text">{h}</span>
+      </li>
+    ))}
+  </ul>
+
+  <ul class="exp-tags" role="list" aria-label="Topics">
+    {exp.tags.map((tag) => <li class="exp-tag t-mono">{tag}</li>)}
+  </ul>
+</article>
+
+<style>
+  .exp {
+    padding: var(--s-6) 0;
+    border-top: 1px solid var(--rule);
+  }
+  .exp:first-of-type { border-top: 0; padding-top: 0; }
+
+  .exp-head {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: var(--s-5);
+    align-items: baseline;
+    margin-bottom: var(--s-4);
+  }
+  .exp-id { display: grid; gap: 0.15rem; }
+  .exp-num { color: var(--accent); font-size: var(--t-sm); }
+  .exp-period { color: var(--ink-3); font-size: var(--t-xs); letter-spacing: 0.05em; }
+
+  .exp-title { min-width: 0; }
+  .exp-role {
+    font-family: var(--font-display);
+    font-weight: 450;
+    font-size: var(--t-2xl);
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+  .exp-at { color: var(--ink-3); font-style: italic; font-weight: 350; }
+  .exp-company { font-style: italic; font-weight: 350; }
+  .exp-meta { margin: 0.35rem 0 0; }
+
+  .exp-quote {
+    color: var(--ink-2);
+    margin: var(--s-3) 0 var(--s-4) 9rem;
+    font-family: var(--font-display);
+    font-size: var(--t-lg);
+    line-height: 1.4;
+    max-width: 56ch;
+  }
+
+  .exp-list {
+    list-style: none;
+    margin: 0 0 var(--s-4) 9rem;
+    padding: 0;
+    display: grid;
+    gap: 0.55rem;
+  }
+  .exp-list li {
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    align-items: baseline;
+    color: var(--ink);
+    font-size: var(--t-base);
+    line-height: 1.55;
+    max-width: 70ch;
+  }
+  .exp-bullet { color: var(--accent); font-family: var(--font-mono); }
+
+  .exp-tags {
+    list-style: none;
+    margin: 0 0 0 9rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .exp-tag {
+    font-size: var(--t-xs);
+    color: var(--ink-2);
+    padding: 0.25em 0.6em;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--paper) 70%, var(--paper-2));
+  }
+
+  @media (max-width: 800px) {
+    .exp-head { grid-template-columns: 1fr; gap: 0.5rem; }
+    .exp-id { display: flex; gap: 0.8rem; align-items: baseline; }
+    .exp-quote, .exp-list, .exp-tags { margin-left: 0; }
+  }
+</style>

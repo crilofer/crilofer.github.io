@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crilofer.github.io/sitemap-index.xml
