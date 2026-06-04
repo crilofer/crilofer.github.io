@@ -130,7 +130,7 @@ const stats = [
           <p class="traj-p">Built Wio Bank’s lending platform from scratch with a team of 10; then became Director of Engineering at Baraka (YC S21) — 25 engineers across 5 disciplines.</p>
         </li>
         <li class="traj-item traj-item--current">
-          <span class="traj-year t-mono">2025</span>
+          <span class="traj-year t-mono">2025<span class="present">— Present</span></span>
           <h3 class="traj-h">Head of AI Engineering, Tymit.</h3>
           <p class="traj-p">Multi-agent systems in production, a proprietary agentic-memory manager, and the AI technical roadmap end-to-end.</p>
         </li>
@@ -405,10 +405,15 @@ const stats = [
     .traj-item .traj-p { grid-column: 1 / -1; }
   }
   .traj-item--current .traj-year::after {
-    content: " — Present";
+    content: "";
+  }
+  .traj-item--current .present {
     color: var(--ink-3);
     font-style: italic;
-    white-space: nowrap;
+    font-weight: 400;
+    display: block;
+    font-size: var(--t-xs);
+    margin-top: 0.1rem;
   }
 
   /* ============== SELECTED ============== */
