@@ -45,6 +45,19 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,350;9..144,400;9..144,450;9..144,500;9..144,600&family=Inter+Tight:wght@350;400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     />
+
+    <!-- Theme: set before paint to avoid a flash. -->
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (_) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
   </head>
   <body class={pageClass}>
     <a href="#main" class="skip-link">Skip to content</a>

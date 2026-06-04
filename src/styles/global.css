@@ -1,12 +1,14 @@
 /* ==========================================================================
-   Brand: "Volume 01" — an editorial / monograph personal site
-   Cristian López Fernández — crilofer
+   Brand: an editorial / monograph personal site
+   Cristian Lopez — crilofer
    ========================================================================== */
 
 /* ---------- Design tokens ---------- */
 :root {
   /* Palette — warm paper with a deep ink and a single oxide accent.
-     No cyan-on-dark, no purple-to-blue gradients, no neon. */
+     No cyan-on-dark, no purple-to-blue gradients, no neon.
+     The featured-card tokens invert in dark mode so the "hero" card
+     always reads as the inverse of the page. */
   --paper:        oklch(96.5% 0.012 85);     /* warm cream */
   --paper-2:      oklch(93.5% 0.014 85);     /* slightly darker card */
   --ink:          oklch(20% 0.02 50);        /* deep sepia black */
@@ -16,6 +18,16 @@
   --accent:       oklch(58% 0.16 38);        /* oxide / rust */
   --accent-soft:  oklch(58% 0.16 38 / 0.12);
   --accent-2:     oklch(42% 0.08 160);       /* deep moss for variety */
+
+  /* Featured "inverted" card — light theme: dark card, light text */
+  --feat-bg:      var(--ink);
+  --feat-fg:      var(--paper);
+  --feat-fg-2:    oklch(82% 0.02 85);
+  --feat-fg-3:    oklch(70% 0.02 85);
+  --feat-accent:  oklch(75% 0.12 38);
+  --feat-rule:    oklch(40% 0.02 50);
+
+  color-scheme: light;
 
   /* Type */
   --font-display: "Fraunces", "Iowan Old Style", "Charter", "Georgia", ui-serif, serif;
@@ -47,6 +59,56 @@
   --page-max: 76rem;
   --measure: 62ch;
   --radius: 4px;
+}
+
+/* ---------- Dark theme ----------
+   Inverts the paper/ink axis while keeping a hint of the same warm hue,
+   so the brand reads as the same site at night — not a different site. */
+[data-theme="dark"] {
+  --paper:        oklch(14% 0.012 50);
+  --paper-2:      oklch(19% 0.014 50);
+  --ink:          oklch(92% 0.012 85);
+  --ink-2:        oklch(72% 0.012 85);
+  --ink-3:        oklch(55% 0.015 60);
+  --rule:         oklch(28% 0.015 50);
+  --accent:       oklch(72% 0.14 45);       /* a touch lighter for contrast on dark */
+  --accent-soft:  oklch(72% 0.14 45 / 0.18);
+  --accent-2:     oklch(60% 0.1 160);
+
+  /* In dark mode, the featured card is the light card on a dark page.
+     Tokens flip so the card still reads as the inverse of the body. */
+  --feat-bg:      var(--paper);
+  --feat-fg:      var(--ink);
+  --feat-fg-2:    oklch(35% 0.02 50);
+  --feat-fg-3:    oklch(45% 0.02 50);
+  --feat-accent:  oklch(50% 0.16 38);
+  --feat-rule:    oklch(80% 0.02 50);
+
+  color-scheme: dark;
+}
+
+/* If the user has not expressed a preference via the toggle, mirror the
+   system. The inline script in Base.astro sets [data-theme] explicitly,
+   which always wins. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --paper:        oklch(14% 0.012 50);
+    --paper-2:      oklch(19% 0.014 50);
+    --ink:          oklch(92% 0.012 85);
+    --ink-2:        oklch(72% 0.012 85);
+    --ink-3:        oklch(55% 0.015 60);
+    --rule:         oklch(28% 0.015 50);
+    --accent:       oklch(72% 0.14 45);
+    --accent-soft:  oklch(72% 0.14 45 / 0.18);
+    --accent-2:     oklch(60% 0.1 160);
+    --feat-bg:      var(--paper);
+    --feat-fg:      var(--ink);
+    --feat-fg-2:    oklch(35% 0.02 50);
+    --feat-fg-3:    oklch(45% 0.02 50);
+    --feat-accent:  oklch(50% 0.16 38);
+    --feat-rule:    oklch(80% 0.02 50);
+    color-scheme: dark;
+  }
 }
 
 /* ---------- Reset / base ---------- */
@@ -202,4 +264,5 @@ body::before {
     radial-gradient(circle at 1px 1px, var(--ink) 1px, transparent 1.2px);
   background-size: 3px 3px;
 }
+[data-theme="dark"] body::before { mix-blend-mode: screen; opacity: 0.04; }
 body > * { position: relative; z-index: 1; }

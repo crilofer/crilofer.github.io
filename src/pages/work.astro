@@ -20,26 +20,7 @@ import { experiences, education } from "../data/site.ts";
   <hr class="hairline" />
 
   <section class="page-body">
-    <div class="wrap page-grid">
-      <aside class="page-aside">
-        <p class="t-eyebrow">Reading guide</p>
-        <p class="aside-text">
-          Each entry is the role, the period, and the things I owned or
-          shipped. The quote is how the company described itself, in its
-          own words, at the time.
-        </p>
-        <p class="t-eyebrow" style="margin-top: var(--s-4)">Also</p>
-        <ul class="aside-list">
-          {education.map((ed) => (
-            <li>
-              <strong>{ed.degree}</strong>
-              <br />
-              <span class="t-meta">{ed.school} · {ed.period}</span>
-            </li>
-          ))}
-        </ul>
-      </aside>
-
+    <div class="wrap">
       <div class="exp-list" role="list">
         {experiences.map((exp, i) => (
           <ExperienceItem exp={exp} index={i} />
@@ -68,23 +49,9 @@ import { experiences, education } from "../data/site.ts";
   .page-lead { max-width: 44ch; }
 
   .page-body { padding: var(--s-7) 0 var(--s-8); }
-  .page-grid {
-    display: grid;
-    grid-template-columns: 16rem 1fr;
-    gap: var(--s-6);
-    align-items: start;
-  }
-  .page-aside {
-    position: sticky;
-    top: 6rem;
-    align-self: start;
-  }
-  .aside-text { font-size: var(--t-sm); color: var(--ink-2); margin: 0.4rem 0 0; max-width: 24ch; }
-  .aside-list { list-style: none; padding: 0; margin: 0.5rem 0 0; display: grid; gap: 0.7rem; font-size: var(--t-sm); }
+  .exp-list { max-width: none; }
 
   @media (max-width: 980px) {
     .page-head-grid { grid-template-columns: 1fr; }
-    .page-grid { grid-template-columns: 1fr; }
-    .page-aside { position: static; }
   }
 </style>

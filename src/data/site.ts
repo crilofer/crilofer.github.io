@@ -4,9 +4,9 @@
 export type Link = { label: string; href: string };
 
 export const profile = {
-  name: "Cristian López Fernández",
-  // Display name (first name + initials style, used in headers)
-  short: "Cristian López Fernández",
+  name: "Cristian Lopez",
+  // Display name (first name + surname), used in headers
+  short: "Cristian Lopez",
   // Handle used in chrome
   handle: "crilofer",
   // Role / tagline
@@ -216,7 +216,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Agentic Memory Manager",
-    role: "Architect & lead engineer",
+    role: "Head of AI Engineering",
     year: "2025",
     context: "Tymit",
     blurb:
@@ -231,7 +231,7 @@ export const projects: Project[] = [
   },
   {
     title: "Customer-Facing Multi-Agent System",
-    role: "Lead engineer",
+    role: "Head of AI Engineering",
     year: "2025",
     context: "Tymit",
     blurb:
@@ -246,7 +246,7 @@ export const projects: Project[] = [
   },
   {
     title: "Developer-Experience Agents",
-    role: "Lead engineer",
+    role: "Head of AI Engineering",
     year: "2025",
     context: "Tymit — internal",
     blurb:
@@ -260,7 +260,7 @@ export const projects: Project[] = [
   },
   {
     title: "Tymit Platform — Monolith to Microservices",
-    role: "Principal engineer, employee №1",
+    role: "Principal Software Engineer · Employee №1",
     year: "2018 — 2021",
     context: "Tymit",
     blurb:
@@ -275,7 +275,7 @@ export const projects: Project[] = [
   },
   {
     title: "Wio Bank — Lending Platform",
-    role: "Technical Lead (greenfield)",
+    role: "Technical Lead",
     year: "2022",
     context: "Wio Bank",
     blurb:
@@ -367,8 +367,8 @@ export const education: Education[] = [
 ];
 
 export const meta = {
-  title: "Cristian López Fernández — Head of AI Engineering",
+  title: "Cristian Lopez — Head of AI Engineering",
   description:
-    "Personal site of Cristian López Fernández — Head of AI Engineering at Tymit. AI-native systems, multi-agent production work, and engineering leadership across fintech.",
+    "Personal site of Cristian Lopez — Head of AI Engineering at Tymit. AI-native systems, multi-agent production work, and engineering leadership across fintech.",
   url: "https://crilofer.github.io",
 };
