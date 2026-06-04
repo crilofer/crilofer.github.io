@@ -76,7 +76,7 @@ const kindLabel: Record<Project["kind"], string> = {
     background: color-mix(in oklab, var(--paper) 88%, var(--paper-2));
   }
   .proj--featured {
-    background: var(--feat-bg);
+    background: var(--paper-2);
     color: var(--feat-fg);
     border-color: var(--feat-rule);
     display: grid;
@@ -100,7 +100,7 @@ const kindLabel: Record<Project["kind"], string> = {
     height: 100%;
     background: var(--feat-accent);
   }
-  .proj--featured:hover { background: color-mix(in oklab, var(--feat-bg) 88%, var(--feat-fg) 12%); }
+  .proj--featured:hover { background: var(--accent-soft); }
   .proj--featured .proj-head { grid-area: head; }
   .proj--featured .proj-title { grid-area: main; }
   .proj--featured .proj-blurb { grid-area: blurb; align-self: end; }

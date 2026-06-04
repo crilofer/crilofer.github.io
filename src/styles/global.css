@@ -22,13 +22,16 @@
   --accent-soft:  oklch(58% 0.16 38 / 0.12);
   --accent-2:     oklch(42% 0.08 160);       /* deep moss for variety */
 
-  /* Featured "inverted" card — light theme: dark card, light text */
-  --feat-bg:      var(--ink);
-  --feat-fg:      var(--paper);
-  --feat-fg-2:    oklch(82% 0.02 85);
-  --feat-fg-3:    oklch(70% 0.02 85);
-  --feat-accent:  oklch(75% 0.12 38);
-  --feat-rule:    oklch(40% 0.02 50);
+  /* Featured card — same family as the regular cards in both modes.
+     Differentiation is positional (first, full-width), typographic
+     (larger title), and via a rust accent strip on the left edge.
+     No color inversion. */
+  --feat-bg:      var(--paper);
+  --feat-fg:      var(--ink);
+  --feat-fg-2:    var(--ink-2);
+  --feat-fg-3:    var(--ink-3);
+  --feat-accent:  var(--accent);
+  --feat-rule:    var(--rule);
 
   color-scheme: light;
 
@@ -81,16 +84,9 @@
   --accent-soft:  oklch(76% 0.14 45 / 0.20);
   --accent-2:     oklch(64% 0.1 160);
 
-  /* Featured card stays in the same family as the regular cards in dark
-     mode (dark on dark, light text). In light mode it inverts to a dark
-     card with light text. Differentiation in dark mode is typographic
-     and positional, not via a color flip. */
-  --feat-bg:      var(--paper-2);
-  --feat-fg:      var(--ink);
-  --feat-fg-2:    var(--ink-2);
-  --feat-fg-3:    var(--ink-3);
-  --feat-accent:  var(--accent);
-  --feat-rule:    var(--rule);
+  /* Featured card uses the same tokens in dark mode (set in :root).
+     No dark-mode override needed — it's the same family as the regular
+     cards: dark bg, light text, light border, rust accent. */
 
   color-scheme: dark;
 }
@@ -109,7 +105,7 @@
     --accent:       oklch(76% 0.14 45);
     --accent-soft:  oklch(76% 0.14 45 / 0.20);
     --accent-2:     oklch(64% 0.1 160);
-    --feat-bg:      var(--paper-2);
+    --feat-bg:      var(--paper);
     --feat-fg:      var(--ink);
     --feat-fg-2:    var(--ink-2);
     --feat-fg-3:    var(--ink-3);
