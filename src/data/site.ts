@@ -49,12 +49,12 @@ export const experiences: Experience[] = [
   {
     company: "Crilotech",
     url: "https://crilotech.com",
-    role: "Founder & Principal Engineer",
+    role: "Founder",
     contract: "Independent",
     period: "2025 — Present",
     location: "Remote",
     highlights: [
-      "Solo engineering studio — design, build and ship end-to-end, on the side of the day job.",
+      "Solo engineering studio — design, build and ship end-to-end.",
       "Work across AI features in production, mobile and web platforms, and custom software. Technology agnostic — pitched on outcomes, not stacks.",
       "A few clients, scoped tight, high craft.",
     ],

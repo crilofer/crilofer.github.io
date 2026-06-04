@@ -30,7 +30,6 @@ const stats = [
   <section class="hero">
     <div class="wrap hero-grid">
       <aside class="hero-meta reveal">
-        <p class="t-eyebrow">{now.toLocaleDateString("en-GB", { month: "long", year: "numeric" })}</p>
         <p class="t-mono hero-coords">
           {profile.location} · 25.20°N 55.27°E
         </p>
@@ -283,7 +282,7 @@ const stats = [
     align-items: start;
   }
   .hero-meta { display: grid; gap: 0.4rem; }
-  .hero-coords { color: var(--ink-3); font-size: var(--t-xs); }
+  .hero-coords { color: var(--ink-3); font-size: var(--t-xs); margin: 0; }
 
   .hero-title {
     font-family: var(--font-display);
